@@ -6,10 +6,8 @@ function() {
 		activity = new Activity();
 	});
 
-	it("should receive an content view",
+	it("should have a content view",
 	function() {
-		var view = new View();
-		activity.setContentView(view);
-		expect(activity.getContentView()).toBe(view);
+		expect(typeof(activity.contentView)).toNotBe("undefined");
 	});
 });
