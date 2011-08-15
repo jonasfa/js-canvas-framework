@@ -18,4 +18,9 @@ function() {
 		});	
 	});
 	
+	it("should draw",
+	function() {
+		expect(typeof(view.draw)).toBe("function");
+	});
+	
 });
