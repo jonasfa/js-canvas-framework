@@ -16,14 +16,14 @@ function() {
 		it("should draw itself inside the bounds given through View.layout()",
 		function(){
 			var givenArguments;
-			var fakeCanvas = {
+			var fakeContext = {
 				fillText: function(textToDraw, x, y, maxWidth) {
 					givenArguments = arguments;
 				}
 			};
 			textView.layout(20, 30, 40, 50);
 			textView.text = "opa";
-			textView.draw(fakeCanvas);
+			textView.draw(fakeContext);
 			expect(givenArguments).toEqual({'0':'opa', '1':20, '2':30, '3':20});
 		});
 	});

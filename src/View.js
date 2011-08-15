@@ -13,4 +13,4 @@ View.prototype.layout = function(left, top, right, bottom) {
 	this.bottom = bottom;
 }
 
-View.prototype.draw = function(canvas) {}
+View.prototype.draw = function(context) {}
