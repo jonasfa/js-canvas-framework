@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Example</title>
+
+    <script type="text/javascript" src="src/View.js"></script>
+    <script type="text/javascript" src="src/TextView.js"></script>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+    var canvas = document.createElement("canvas");
+    canvas.width = canvas.height = 300;
+    document.body.appendChild(canvas);
+
+    var context = canvas.getContext("2d");
+
+    var textView = new TextView();
+    textView.text = "Hello!";
+    textView.layout(20, 30, 240, 240);
+    textView.draw(context);
+  </script>
+
+  </body>
+</html>
